@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sucursal Virtual Mi Plata</title>
+    <link rel="stylesheet" href="./CSS/mi-plata-movile.css">
+    <link rel="stylesheet" href="./CSS/mi-plata-tablet.css" media="screen and (min-width: 420px)">
+    <link rel="stylesheet" href="./CSS/mi-plata-laptop.css" media="screen and (min-width: 600px)">
+    <link rel="stylesheet" href="./CSS/mi-plata-desktop.css" media="screen and (min-width: 900px)">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Poppins:wght@200;300&display=swap');
+      </style>
+</head>
+<body>
+    <header>
+        <img src="./RECURSOS_GRAFICOS/mi-plata-logo.png" alt="logotipo mi plata">
+    </header>
+    <nav>
+        <ul class="nav-bar">
+            <li onclick="activarIngreso(event)"><img src="./RECURSOS_GRAFICOS/candado-icon.png" alt=""> INGRESAR</li>
+            <li onclick="activarRegistro(event)"><img src="./RECURSOS_GRAFICOS/registro-icon.png" alt=""> REGISTRARSE</li>
+        </ul>
+
+    </nav>
+
+    <main>
+        <div class="main-container">
+            <div class="carousel-container" id="section-carousel">
+                <div class="carousel">
+                    <div id="slide">
+                        <img src="./RECURSOS_GRAFICOS/CAROUSEL/slide-1.jpg" alt="foto de familia">
+                        <img src="./RECURSOS_GRAFICOS/CAROUSEL/slide-2.jpg" alt="foto de familia">
+                        <img src="./RECURSOS_GRAFICOS/CAROUSEL/slide-3.jpg" alt="foto de familia">
+                    </div>
+                    <div class="botones-carousel">
+                        <button class="btn" id="regresar" onclick="regresar(event)"><</button>
+                        <button class="btn" id="adelantar" onclick="adelantar(event)">></button>
+                    </div>
+                </div>
+            </div>
+            
+            <section class="imagen-central" id="section-1">
+                <img src="./RECURSOS_GRAFICOS/imagen-central.jpg" alt="">
+                <div class="texto-container">
+                    <p id="texto1">Maneje su <span>PLATA:</span></p>
+                    <p id="texto2">Fácil, Rápido y Seguro!</p>
+                </div>
+                
+            </section>
+        </div>
+        <section class="cajas-info" id="section-2">
+            <div class="caja-container">
+                <img src="./RECURSOS_GRAFICOS/CAJAS/Datafono.png" alt="">
+                <div>
+                    <h2>Tarjeta Mi Plata Visa</h2>
+                    <p>Controla lo que gastas, sin cuota de manejo.</p>
+                </div>
+                <button id="pedirla">Quiero pedirla</button>
+            </div>
+
+            <div class="caja-container">
+                <img src="./RECURSOS_GRAFICOS/CAJAS/viaje.jpg" alt="">
+                <div>
+                    <h2>Viajes</h2>
+                    <p>Compra tus tiquetes con Pinbus y Hopper a través de Mi Plata y viaja por el país.</p>
+                </div>
+                <button id="pedirla">Prémiate</button>
+            </div>
+
+            <div class="caja-container">
+                <img src="./RECURSOS_GRAFICOS/CAJAS/Prestamo.jpg" alt="">
+                <div>
+                    <h2>Préstamo Propulsor</h2>
+                    <p>¡Recibe la plata de una en Mi Plata! y págala a 36 meses.</p>
+                </div>
+                <button id="pedirla">Conócelo</button>
+            </div>
+
+        </section>
+
+        <section class="formulario-ingreso" id="ingreso">
+            <form action="">
+                <span id="close-ingreso" onclick="cerrarIngreso(event)">X</span>
+                <span>Inicia Sesión</span>
+
+                <label for="usuario">Usuario:</label>
+                <input type="text" name="usuario" id="usuarioIngreso">
+
+                <label for="clave">Clave:</label>
+                <input type="number" name="clave" id="claveIngreso">
+
+                <button onclick="condicion(event)">Ingresar</button>
+
+                <p id="intentos"></p>
+                <p id="texto-ingreso"></p>
+            </form>
+        </section>
+
+        <section class="formulario-registro" id="registro">
+            <form action="">
+                <span id="close-registro" onclick="cerrarRegistro(event)">X</span>
+                <span>Regístrate</span>
+
+                <label for="identificacion">Identificación:</label>
+                <input type="number" name="identificacion" id="id" required>
+
+                <label for="usuario">Usuario:</label>
+                <input type="text" name="usuario" id="usuario" required>
+
+                <label for="email">Correo:</label>
+                <input type="email" name="email" id="email" required>
+
+                <label for="clave">Clave:</label>
+                <input type="number" name="clave" id="clave" required>
+
+                <label for="repclave">Repetir Clave:</label>
+                <input type="number" name="repclave" id="repetir-clave" required>
+
+                <input type="submit" onclick="procesoRegistro(event)" value="Registrarse" id="Registrarse">
+
+                <p id="texto-registro"></p>
+                <p id="iniciar-sesion" onclick="iniciarSesionRegistro(event)">Iniciar Sesión</p>
+            </form>
+            
+        </section>
+
+        <section class="formulario-consultas" id="consultas">
+            <form action="">
+                <span>Consultas y Movimientos</span>
+
+                <button onclick="activarRetiros(event)">Retirar</button>
+                <button onclick="activarConsultaSaldo(event)">Consultar Saldo</button>
+                <button onclick="activarConsignaciones(event)">Consignar</button>
+                <button onclick="activarCambioClave(event)">Cambiar Clave</button>
+                <button onclick="activarMovimientos(event)">Consultar Movimientos</button>
+                <button onclick="cerrarConsultas(event)">Salir</button>
+            </form>
+        </section>
+
+        <section class="formulario-retiros" id="retiros">
+            <form action="">
+                <span>Retirar Dinero</span>
+                <label for="cantidad-retiro">¿Cuánto dinero desea retirar?</label>
+                <input type="number" name="cantidad-retiro" id="cantidad-retiro">
+                <button onclick="retirarDinero(event)">Confirmar</button>
+                <button onclick="cerrarRetiros(event)">Cancelar</button>
+                <button id="finalizar" onclick="regresarRetiros(event)">Finalizar</button>
+                <div id="resultado-operacion">
+                    <p id="texto-resultado"></p>
+                    <div id="nuevo-saldo"></div>
+                </div>
+            </form>
+        </section>
+
+        <section class="formulario-consulta-saldo" id="consulta-saldo">
+            <form action="">
+                <span>Consultar Saldo</span>
+                <h3>Su saldo actual es de: </h3><div id="saldo-actual"></div>
+                <button onclick="cerrarConsultaSaldo(event)">salir</button>
+            </form>
+        </section>
+
+        <section class="formulario-consignaciones" id="consignaciones">
+            <form action="">
+                <span>Consignar Dinero</span>
+                <label for="cantidad-consignacion">¿Cuánto dinero desea consignar?</label>
+                <input type="number" name="cantidad-consignacion" id="cantidad-consignacion">
+                <button onclick="consignarDinero(event)">Confirmar</button>
+                <button onclick="cerrarConsignaciones(event)">Cancelar</button>
+                <button id="finalizar2" onclick="regresarConsignaciones(event)">Finalizar</button>
+                <div id="resultado-operacion2">
+                    <p id="texto-resultado2"></p>
+                    <div id="nuevo-saldo2"></div>
+                </div>
+            </form>
+        </section>
+
+        <section class="formulario-movimientos" id="movimientos">
+            <form action="">
+                <span>Movimientos</span>
+                <div id="mostrar-retiros"></div>
+                <div id="mostrar-consignaciones"></div>
+                <button onclick="cerrarMovimientos(event)">salir</button>
+            </form>
+        </section>
+
+        <section class="formulario-cambio-clave" id="cambio-clave">
+            <form action="">
+                <span>Cambiar Clave</span>
+    
+                <label for="clave-actual">Digite su clave actual:</label>
+                <input type="number" name="clave-actual" id="clave-actual">
+    
+                <label for="nueva-clave">Digite su nueva clave:</label>
+                <input type="number" name="nueva-clave" id="nueva-clave">
+    
+                <label for="confirmar-clave">Confirme su nueva clave:</label>
+                <input type="number" name="confirmar-clave" id="confirmar-clave">
+    
+                <button onclick="cambiarClave(event)">Cambiar</button>
+                <button onclick="cerrarCambioClave(event)" >Regresar</button>
+                <button id="finalizar3" onclick="regresarCambioClave(event)">Finalizar</button>
+                <div>
+                    <p id="texto-resultado3"></p>
+                </div>
+
+            </form>
+        </section>
+    </main>
+
+    
+
+    <footer>
+        <p class="footer-info">Samuel Romerin</p>
+        <p class="footer-info">Redes Sociales:</p>
+        <div class="redes-sociales">
+            <a href="https://www.facebook.com/Samuel.Romerin" target="_blank"><img src="./RECURSOS_GRAFICOS/ICONOS_REDES_SOCIALES/FACEBOOK.png" alt="Ícono de Facebook" width="30px" height="auto"></a>
+            <a href="https://www.instagram.com/samurovi/" target="_blank"><img src="./RECURSOS_GRAFICOS/ICONOS_REDES_SOCIALES/INSTAGRAM.png" alt="Ícono de Instagram" width="30px" height="auto"></a>
+            <a href="https://wa.me/+573003167892" target="_blank"><img src="./RECURSOS_GRAFICOS/ICONOS_REDES_SOCIALES/WHATSAPP.png" alt="Ícono de Whatsapp" width="30px" height="auto"></a>
+            <a href="https://www.linkedin.com/in/samuel-romerin-689b86213/" target="_blank"><img src="./RECURSOS_GRAFICOS/ICONOS_REDES_SOCIALES/LINKEDIN WHITE.png" alt="Ícono de LinkedId" width="30px" height="auto"></a>
+        </div>
+        <p class="footer-info">Todos los derechos reservados &#169</p>
+        
+    </footer>
+    
+    <script src="./JS/mi-plata.js"></script>
+</body>
+</html>

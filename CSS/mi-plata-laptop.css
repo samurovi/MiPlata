@@ -1,0 +1,759 @@
+/*General*/
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+/*Body*/
+body{
+    font-family: 'Poppins', sans-serif;
+}    
+
+/*Header*/
+header{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 10px 0px 10px 0px;
+}
+
+header img{
+    width: 80px;
+    height: auto;
+}
+/*Nav*/
+.nav-bar{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    background-color: rgba(208,207,72,255);
+    height: 50px;
+    align-items: center;
+}
+
+.nav-bar:hover{
+    background-color: rgb(121,120,31);
+    transition: all.5s ease-in-out;
+    cursor: pointer;
+}
+
+.nav-bar img{
+    width: 10px;
+    height: auto;
+}
+
+.nav-bar li{
+    margin: 0 15px 0 15px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.nav-bar li:hover{
+    cursor: pointer;
+    color: white;
+    transition: all.5s ease;
+}
+/*Main*/
+main{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0px 0px 0px 0px;
+    justify-content: center;
+    position: relative;
+}
+
+.main-container{
+    display: flex;
+    height: fit-content;
+}
+
+/*Carousel*/
+.carousel-container{
+    display: flex;
+    align-items: center;
+    height: fit-content;
+    width: 50%;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: 1px;
+    background-color: rgba(208,207,72,255);
+    margin: 0 5px 0 5px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+}
+
+.botones-carousel{
+    position: absolute;
+    display: flex;
+    width: 100%;
+    top: 40%;
+    justify-content: space-between;
+}
+
+.btn:hover{
+    cursor: pointer;
+    color: white;
+    transition: all.5s ease;
+    background-color: rgb(121,120,31);
+    transition: all.5s ease-in-out;
+}
+.carousel{
+    overflow: hidden;
+    display: flex;
+    width: 100%;
+    position: relative;
+}
+
+#slide{
+    display: flex;
+    transition: all.5s ease;
+    width: 300%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+#slide img{
+    min-width: 100%;
+    height: 233px;
+}
+
+/*Section 1*/
+.imagen-central{
+    width: 50%;
+    height: 100%;
+    position: relative;
+}
+
+.imagen-central img{
+    width: 100%;
+    height: 233px;
+}
+
+.texto-container{
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 35%;
+    width: 100%;
+    justify-content: center;
+}
+
+#texto1{
+    color: white;
+    font-size: 1.8rem;
+    text-shadow: 5px 5px 10px black;
+    width: 100%;
+    text-align: center;
+}
+
+#texto1 span{
+    color: rgba(208,207,72,255);
+    font-weight: bolder;
+}
+
+#texto2{
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-shadow: 5px 5px 10px black;
+    width: 100%;
+    text-align: center;
+}
+
+/*Section 2*/
+
+.cajas-info{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    width: 100%;
+    height: fit-content;
+}
+
+.caja-container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 25%;
+    justify-content: center;
+    margin: 15px 10px 15px 10px;
+    box-shadow: 5px 5px 10px rgb(103, 103, 103);
+}
+
+.caja-container img{
+    width: 100%;
+}
+
+.caja-container h2{
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 15px 10px 10px 10px;
+}
+
+.caja-container p{
+    text-align: center;
+    font-size: 0.8rem;
+    margin: 10px 10px 10px 10px;
+}
+
+.caja-container button{
+    padding: 10px;
+    border-radius: 3px;
+    border: 1.5px;
+    border-color: black;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    background-color: rgba(208,207,72,255);
+    width: fit-content;
+    height: 40px;
+}
+
+.caja-container button:hover{
+    cursor: pointer;
+    background-color: rgb(121,120,31);
+    color: white;
+    transition: all.5s ease-in-out;
+}
+
+/*Section 3*/
+.formulario-ingreso{
+    display: none;
+    position: absolute;
+    width: 45%;
+    background-color: white;
+    top: 5%;
+    font-weight: bold;
+    box-shadow: 5px 5px 10px rgb(86, 86, 86);
+    border-radius: 5px;
+}
+
+.formulario-ingreso form{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px 10px 10px 10px;
+    align-items: center;
+    width: 100%;
+    font-size: 1rem;
+}
+
+#close-ingreso{
+    margin: 0px 0px 0px 0px;
+    text-decoration: none;
+    text-align: right;
+    position: relative;
+    left: 45%;
+    font-weight: lighter;
+}
+
+#close-ingreso:hover{
+    cursor: pointer;
+    color: black;
+}
+
+.formulario-ingreso form span{
+    margin: 0px 0px 20px 0px;
+    text-decoration: underline;
+    color:  rgb(121,120,31);
+}
+
+.formulario-ingreso form input{
+    margin-bottom: 20px;
+    height: 30px;
+    padding: 0px 5px 0px 5px;
+    width: 60%;
+}
+
+.formulario-ingreso form button{
+    width: fit-content;
+    padding: 10px;
+    border-radius: 3px;
+    border: 1.5px;
+    border-color: black;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    background-color: rgba(208,207,72,255);
+}
+
+.formulario-ingreso form button:hover{
+    cursor: pointer;
+    background-color: rgb(121,120,31);
+    color: white;
+    transition: all.5s ease-in-out;
+}
+
+#texto-ingreso{
+    color: red;
+}
+
+/*Section 4*/
+.formulario-registro{
+    display: none;
+    position: absolute;
+    width: 45%;
+    background-color: white;
+    top: 5%;
+    font-weight: bold;
+    box-shadow: 5px 5px 10px rgb(86, 86, 86);
+    border-radius: 5px;
+}
+
+.formulario-registro form{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px 10px 10px 10px;
+    align-items: center;
+    width: 100%;
+    font-size: 1rem;
+}
+
+#close-registro{
+    margin: 0px 0px 0px 0px;
+    text-decoration: none;
+    text-align: right;
+    position: relative;
+    left: 45%;
+    font-weight: lighter;
+}
+
+#close-registro:hover{
+    cursor: pointer;
+    color: black;
+}
+
+.formulario-registro form span{
+    margin: 0px 0px 20px 0px;
+    text-decoration: underline;
+    color:  rgb(121,120,31);
+}
+
+.formulario-registro form input{
+    margin-bottom: 20px;
+    height: 30px;
+    padding: 0px 5px 0px 5px;
+    width: 60%;
+}
+
+#Registrarse{
+    width: fit-content;
+    height: 40px;
+    padding: 10px;
+    border-radius: 3px;
+    border: 1.5px;
+    border-color: black;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    background-color: rgba(208,207,72,255);
+}
+
+#Registrarse:hover{
+    cursor: pointer;
+    background-color: rgb(121,120,31);
+    color: white;
+    transition: all.5s ease-in-out;
+}
+
+#texto-registro{
+    color: green;
+}
+
+#iniciar-sesion{
+    display: none;
+    color: blue;
+    text-decoration: underline;
+    margin-bottom: 20px;
+}
+
+#iniciar-sesion:hover{
+    cursor: pointer;
+    color: rgb(92, 92, 251);
+}
+
+
+/*Section 5*/
+.formulario-consultas{
+    display: none;
+    position: absolute;
+    width: 70%;
+    background-color: white;
+    top: 5%;
+    font-weight: bold;
+    box-shadow: 5px 5px 10px rgb(86, 86, 86);
+    border-radius: 5px;
+}
+
+.formulario-consultas form{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    padding: 20px 20px 20px 20px;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3px;
+}
+
+.formulario-consultas form span{
+    margin: 0px 0px 20px 0px;
+    text-decoration: underline;
+    color:  rgb(121,120,31);
+    width: 100%;
+}
+
+.formulario-consultas form button{
+    height: 45px;
+    width: 45%;
+    padding: 5px 5px 5px 5px;
+    background-color: rgba(208,207,72,255);
+    border: 1.5px solid;
+    border-color: black;
+    font-size: 1rem;
+}
+
+.formulario-consultas form button:hover{
+    cursor: pointer;
+    background-color: rgb(121,120,31);
+    color: white;
+    transition: all.5s ease-in-out;
+}
+
+/*Section 6*/
+.formulario-retiros{
+    display: none;
+    position: absolute;
+    width: 45%;
+    background-color: white;
+    top: 5%;
+    font-weight: bold;
+    box-shadow: 5px 5px 10px rgb(86, 86, 86);
+    border-radius: 5px;
+}
+
+.formulario-retiros form{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px 10px 10px 10px;
+    align-items: center;
+    width: 100%;
+    font-size: 0.9rem;
+}
+
+.formulario-retiros form span{
+    margin: 20px 0px 20px 0px;
+    text-decoration: underline;
+    color:  rgb(121,120,31);
+    font-size: 1.2rem;
+}
+
+.formulario-retiros form input{
+    margin-bottom: 20px;
+    height: 30px;
+    padding: 0px 5px 0px 5px;
+    width: 60%;
+}
+
+.formulario-retiros form button{
+    width: fit-content;
+    padding: 10px;
+    border-radius: 3px;
+    border: 1.5px;
+    border-color: black;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    background-color: rgba(208,207,72,255);
+    font-size: 0.9rem;
+}
+
+.formulario-retiros form button:hover{
+    cursor: pointer;
+    background-color: rgb(121,120,31);
+    color: white;
+    transition: all.5s ease-in-out;
+}
+
+#finalizar{
+    display: none;
+}
+
+/*Section 7*/
+
+.formulario-consulta-saldo{
+    display: none;
+    position: absolute;
+    width: 45%;
+    background-color: white;
+    top: 5%;
+    font-weight: bold;
+    box-shadow: 5px 5px 10px rgb(86, 86, 86);
+    border-radius: 5px;
+}
+
+.formulario-consulta-saldo form{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px 10px 10px 10px;
+    align-items: center;
+    width: 100%;
+}
+
+.formulario-consulta-saldo form span{
+    margin: 20px 0px 20px 0px;
+    text-decoration: underline;
+    color:  rgb(121,120,31);
+}
+
+h3{
+    font-size: 0.9rem;
+}
+
+#saldo{
+    font-size: 0.9rem;
+}
+
+.formulario-consulta-saldo form button{
+    width: 100px;
+    padding: 10px;
+    border-radius: 3px;
+    border: 1.5px;
+    border-color: black;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    background-color: rgba(208,207,72,255);
+    margin-top: 10px;
+}
+
+.formulario-consulta-saldo form button:hover{
+    cursor: pointer;
+    background-color: rgb(121,120,31);
+    color: white;
+    transition: all.5s ease-in-out;
+}
+
+/*Section 8*/
+
+.formulario-consignaciones{
+    display: none;
+    position: absolute;
+    width: 45%;
+    background-color: white;
+    top: 5%;
+    font-weight: bold;
+    box-shadow: 5px 5px 10px rgb(86, 86, 86);
+    border-radius: 5px;
+}
+
+.formulario-consignaciones form{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px 10px 10px 10px;
+    align-items: center;
+    width: 100%;
+    font-size: 0.9rem;
+}
+
+.formulario-consignaciones form span{
+    margin: 20px 0px 20px 0px;
+    text-decoration: underline;
+    color:  rgb(121,120,31);
+    font-size: 1.2rem;
+}
+
+.formulario-consignaciones form input{
+    margin-bottom: 20px;
+    height: 30px;
+    padding: 0px 5px 0px 5px;
+    width: 60%;
+}
+
+.formulario-consignaciones form button{
+    width: fit-content;
+    padding: 10px;
+    border-radius: 3px;
+    border: 1.5px;
+    border-color: black;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    background-color: rgba(208,207,72,255);
+    font-size: 0.9rem;
+}
+
+.formulario-consignaciones form button:hover{
+    cursor: pointer;
+    background-color: rgb(121,120,31);
+    color: white;
+    transition: all.5s ease-in-out;
+}
+
+#finalizar2{
+    display: none;
+}
+
+/*Section 9*/
+.formulario-movimientos{
+    display: none;
+    position: absolute;
+    width: 45%;
+    background-color: white;
+    top: 5%;
+    font-weight: bold;
+    box-shadow: 5px 5px 10px rgb(86, 86, 86);
+    border-radius: 5px;
+}
+
+.formulario-movimientos form{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px 10px 10px 10px;
+    align-items: center;
+    width: 100%;
+}
+
+.formulario-movimientos form span{
+    margin: 20px 0px 20px 0px;
+    text-decoration: underline;
+    color:  rgb(121,120,31);
+}
+
+#mostrar-retiros{
+    font-size: 0.8rem;
+}
+
+#mostrar-consignaciones{
+    font-size: 0.8rem;
+}
+
+.formulario-movimientos form button{
+    width: 100px;
+    padding: 10px;
+    border-radius: 3px;
+    border: 1.5px;
+    border-color: black;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    background-color: rgba(208,207,72,255);
+    margin-top: 10px;
+}
+
+.formulario-movimientos form button:hover{
+    cursor: pointer;
+    background-color: rgb(121,120,31);
+    color: white;
+    transition: all.5s ease-in-out;
+}
+
+/*Section 10*/
+.formulario-cambio-clave{
+    display: none;
+    position: absolute;
+    width: 45%;
+    background-color: white;
+    top: 5%;
+    font-weight: bold;
+    box-shadow: 5px 5px 10px rgb(86, 86, 86);
+    border-radius: 5px;
+}
+
+.formulario-cambio-clave form{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px 10px 10px 10px;
+    align-items: center;
+    width: 100%;
+    font-size: 0.9rem;
+}
+
+.formulario-cambio-clave form span{
+    margin: 20px 0px 20px 0px;
+    text-decoration: underline;
+    color:  rgb(121,120,31);
+    font-size: 1.2rem;
+}
+
+.formulario-cambio-clave form input{
+    margin-bottom: 20px;
+    height: 30px;
+    padding: 0px 5px 0px 5px;
+    width: 60%;
+}
+
+.formulario-cambio-clave form button{
+    width: fit-content;
+    padding: 10px;
+    border-radius: 3px;
+    border: 1.5px;
+    border-color: black;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    background-color: rgba(208,207,72,255);
+    font-size: 0.9rem;
+}
+
+.formulario-cambio-clave form button:hover{
+    cursor: pointer;
+    background-color: rgb(121,120,31);
+    color: white;
+    transition: all.5s ease-in-out;
+}
+
+#texto-resultado3{
+    color: red;
+}
+
+#finalizar3{
+    display: none;
+}
+
+/*Footer*/
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+    background-color: rgb(49, 49, 49);
+    text-align: center;
+    width: 100%;
+    padding: 15px 0px 15px 0px;
+    font-size: 0.8rem;
+    margin: 0%;
+}
+
+.footer-info{
+    width: 100%;
+}
+.redes-sociales{
+    width: 100%;
+}
+
+/*Footer*/
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+    background-color: rgb(49, 49, 49);
+    text-align: center;
+    width: 100%;
+    padding: 15px 0px 15px 0px;
+    font-size: 0.9rem;
+    margin: 0%;
+}
+
+.footer-info{
+    width: 100%;
+}
+.redes-sociales{
+    width: 100%;
+}
